@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SearchUsersComponent } from './search-users/search-users.component';
+import { SearchUsersService } from './search-users.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { SearchUsersComponent } from './search-users/search-users.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ SearchUsersService ], // It is important
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
